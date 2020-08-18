@@ -50,6 +50,8 @@ class HouseKeepingLogs {
 	public void addRoom(Room room);
 }
 
+
+
 abstract class Person {
 	String name;
 	Account accountDetail;
@@ -103,6 +105,43 @@ class RoomBooking {
 	BaseRoomCharge totalRoomCharges;
 }
 
+
+
+/* DECORATOR design pattern to solve the room charge problem */
+interface BaseRoomCharge {
+	Double getCost();
+}
+
+class RoomCharge implements BaseRoomCharge {
+	double cost;
+	Double getCost(){
+		return cost;
+	}
+	void setCost(double cost){
+		this.cost = cost;
+	}
+}
+
+class RoomServiceCharge implements BaseRoomCharge {
+	double cost;
+	BaseRoomCharge baseRoomCharge;
+	Double getCost() {
+		baseRoomCharge.setCost(baseRoomCharge.getCost() + cost);
+		return baseRoomCharge.getCost();
+	}
+}
+
+class InRoomPurchaseCharges implements BaseRoomCharge {
+	double cost;
+	BaseRoomCharge baseRoomCharge;
+	Double getCost() {
+		baseRoomCharge.setCost(baseRoomCharge.getCost() + cost);
+		return baseRoomCharge.getCost();
+	}
+}
+
+
+	
 
 
 
