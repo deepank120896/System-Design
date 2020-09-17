@@ -1,0 +1,16 @@
+1. Two Online Players supported.
+2. Follow International Chess rules.
+3. Players play move after one-another.
+4. Player(s) can't cancel or rollback move(s).
+5. Each player/side starts with
+	a. 8 pawns
+	b. 2 bishops
+	c. 2 knights
+	d. 2 rooks
+	e. 1 queen
+	f. 1 king.
+6. All moves should be logged on system.
+7. Game finish conditions:
+	a. Checkmate condition
+	b. Stalemate condition
+	c. Resignation/ System Timeout
