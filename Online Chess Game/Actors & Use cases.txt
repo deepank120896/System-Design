@@ -1,0 +1,9 @@
+ACTORS:
+1. Player
+2. Admin
+
+USE-CASES:
+1. Sign Up
+2. Play(Moving Piece)
+3. Resign
+4. Cancel Membership/ Delete Acount
